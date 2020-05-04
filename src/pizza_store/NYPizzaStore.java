@@ -21,20 +21,13 @@ public class NYPizzaStore extends PizzaStore {
     @Override
     protected Pizza createPizza(PizzaType type)
     {
-        Pizza pizza = null;
-        if(type.equals("Cheese")){
-            pizza = new NYCheeseStyle();
-        } else if(type.equals("Clam")){
-            pizza = new NYClamStyle();
-        }
-        return pizza;
-        // switch(type)
-        // {
-        //     case cheese: return new NYCheeseStyle();
-        //     case clam: return new NYClamStyle();
-        //     case pepperoni: return new NYPepperoniStyle();
-        // }  
-        // return null;
+        switch(type)
+        {
+            case cheese: return new NYCheeseStyle();
+            case clam: return new NYClamStyle();
+            case pepperoni: return new NYPepperoniStyle();
+        }  
+        return null;
     }
 
 }

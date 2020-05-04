@@ -5,7 +5,7 @@ import pizza.Pizza;
 public class NYClamStyle extends Pizza {
     public NYClamStyle()
     {
-        pizzaStr ="Chào các bạn! Đây là bánh pizza Clam kiểu New York\n";
+        pizzaStr ="Chào các bạn! Đây là bánh pizza Clam kiểu New York cac cac\n";
     }
 
     @Override

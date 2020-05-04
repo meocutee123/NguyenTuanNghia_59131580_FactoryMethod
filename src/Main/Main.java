@@ -10,11 +10,11 @@ public class Main {
     public static void main(String[] args)
     {
         PizzaStore chicagoStore = ChicagoPizzaStore.Store();
-        Pizza chicagoPizza = chicagoStore.orderPizza(PizzaType.cheese);
+        Pizza chicagoPizza = chicagoStore.orderPizza(PizzaType.clam);
         System.out.println(chicagoPizza.toString());
 
         PizzaStore nyStore = NYPizzaStore.Store();
-        Pizza nyPizza = nyStore.orderPizza(PizzaType.clam);
+        Pizza nyPizza = nyStore.orderPizza(PizzaType.cheese);
         System.out.println(nyPizza.toString());
 
         // // TODO code application logic here
