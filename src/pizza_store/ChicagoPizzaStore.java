@@ -8,16 +8,24 @@ import chicago_pizza.ChicagoPepperoniStyle;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
+    private static ChicagoPizzaStore store;
+    protected ChicagoPizzaStore(){}
+    public static ChicagoPizzaStore Store() {
+        if (store == null) {
+            store = new ChicagoPizzaStore();
+        }
+        return store;
+    }
+
     @Override
     protected Pizza createPizza(PizzaType type)
     {
-        switch(type)
-        {
-            case cheese: return new ChicagoCheeseStyle();
-            case clam: return new ChicagoClamStyle();
-            case pepperoni: return new ChicagoPepperoniStyle();
-        }  
-        return null;
+        Pizza pizza = null;
+        if(type.equals("Cheese")){
+            pizza = new ChicagoCheeseStyle();
+        } else if(type.equals("Clam")){
+            pizza = new ChicagoClamStyle();
+        }
+        return pizza;
     }
-
 }
